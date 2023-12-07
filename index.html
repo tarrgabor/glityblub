@@ -10,7 +10,57 @@
 </head>
 <body>
     <div class="container">
+        <header>
+            Money Manager applikáció
+        </header>
+        
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Menü</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                
+                <!-- kijelentkezve -->
+                <ul class="navbar-nav" id="loggedOutMenu">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="#" onclick="render('login')">Belépés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="render('register')">Regisztráció</a>
+                    </li>
+                </ul>
 
+                <!-- bejelentkezve -->
+                <ul class="navbar-nav d-none" id="loggedInMenu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="render('newdata'); getToday();">Adatrögzítés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="render('table'); renderData();">Táblázat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="render('calendar'); showCalendar()">Naptár</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="render('chart'); showChart();">Grafikon</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="logout()"><b>Kijelentkezés</b></a>
+                    </li>     
+                </ul>
+              </div>
+            </div>
+        </nav>
+
+        <main>
+
+        </main>
+
+        <footer>
+            <-- NagyOrrKFT -->
+        </footer>
     </div>
 
 
